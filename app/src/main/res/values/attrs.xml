@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="submit_btn_common_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">@drawable/selector_submit_btn_common_bg</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <declare-styleable name="NineGridImageView">
+        <attr name="imgGap" format="dimension"/>
+    </declare-styleable>
+
+</resources>

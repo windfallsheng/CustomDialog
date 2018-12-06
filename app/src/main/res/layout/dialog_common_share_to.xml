@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_stroke_small_corners_bg"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/textview_title"
+        style="@style/text_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:text="分享至"
+        android:textColor="#333333"
+        android:textSize="18dp" />
+
+    <!--显示单个或者多个成员及群组头像和名称-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_member_multiple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layoutAnimation="@anim/layout_animation_fall_down"
+            android:overScrollMode="never"
+            android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/imageview_arrow_down"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_expand_more_black_12dp" />
+    </RelativeLayout>
+
+    <!--开始位置====显示所有成员列表或者分享内容-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+        <!--显示分享内容-->
+        <LinearLayout
+            android:id="@+id/layout_share_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_item_solid_gray_normal_bg"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageview_share_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:background="#F5F5F5"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/textview_share_content"
+                style="@style/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxEms="7"
+                android:maxLines="2"
+                android:text="0"
+                android:textColor="#999999"
+                android:textSize="13dp" />
+        </LinearLayout>
+        <!--显示所有成员列表-->
+        <RelativeLayout
+            android:id="@+id/layout_group_detail"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <View
+                style="@style/divider_line"
+                android:layout_alignParentTop="true" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_group_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:overScrollMode="never"
+                android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+
+            <View
+                style="@style/divider_line"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--结束位置====显示所有成员列表或者分享内容-->
+    <!--编辑输入框-->
+    <com.alter.customdialog.view.BottomLineEditText
+        android:id="@+id/edittext_share_text"
+        style="@style/text_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_bottom_line_edittext"
+        android:hint="给朋友留言"
+        android:maxLines="5"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColorHint="#999999"
+        android:textCursorDrawable="@drawable/cursor"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/textview_input_label"
+        style="@style/text_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:text="最多输入150个字"
+        android:textColor="#999999"
+        android:textSize="10dp" />
+    <!--确定、取消的操作按钮-->
+    <LinearLayout
+        android:id="@+id/operate_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textview_cancel"
+            style="@style/text_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_white_gray_bg"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="8dp"
+            android:text="取消"
+            android:textColor="#666666"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textview_send"
+            style="@style/text_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_white_gray_bg"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="8dp"
+            android:text="发送"
+            android:textColor="#07C460"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</LinearLayout>

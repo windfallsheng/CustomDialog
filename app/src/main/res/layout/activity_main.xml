@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/button_share_single"
+        style="@style/submit_btn_common_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:text="微信分享给单个人对话框"
+        />
+
+    <Button
+        android:id="@+id/button_share_mult"
+        style="@style/submit_btn_common_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:text="微信分享给多个人对话框"
+        />
+
+    <Button
+        android:id="@+id/button_share_single_group"
+        style="@style/submit_btn_common_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:text="微信分享给单个群组对话框"
+        />
+
+    <Button
+        android:id="@+id/button_share_mult_group"
+        style="@style/submit_btn_common_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:text="微信分享给多个群组对话框"
+        />
+
+</LinearLayout>
